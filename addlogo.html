@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Susie Q's Coloring Book</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class='Nav-Bar'>
+      <a href="index.html" class="logo">Suzie Q's</a>
+      <nav class="navbar">
+          <a href="index.html" class="active">Home</a>
+          <a href="addlogo.html" class = "active">Sponsor</a>
+          <a href="donate.html" class="active">Donate</a>
+      </nav>
+  </div>
+  </header>
+
+  <!-- Row 1 -->
+  <div class="button-container">
+    <div class="instructions">
+        <h2>Sponsor:</h2>
+        <p>Click the button to show your support.</p>
+    </div>
+    <button class = "button" id="sponsor-button" onclick="window.location.href = 'https://gofund.me/5e65b909'">Sponsor</button>
+</div>
+
+    <!-- Row 2 -->
+    <div class="button-container">
+        <div class="instructions">
+            <h2>Upload Logo:</h2>
+            <p>Click the button to upload your Logo for the Book</p>
+        </div>
+        <button class = "button" id="upload-image-button" onclick="window.location.href = 'fileLogo.html'">Upload</button>
+
+    </div>
+
+    <!-- Row 3 -->
+    <div class="button-container">
+        <div class="instructions">
+            <h2>Upload Cover Page:</h2>
+            <p>Click the button to upload the cover page of the coloring book</p>
+        </div>
+        <button class = "button" id="donate-button" onclick="window.location.href = 'fileCoverPage.html'">Donate</button>
+    </div>
+
+    <!-- Row 4 -->
+    <div class="button-container">
+        <div class="instructions">
+            <h2>Preview</h2>
+            <p>Check out how cool your logo and cover page looks with our drawings</p>
+        </div>
+        <a href="file:///C:/Users/manas/OHacks_SQ/ColoringBook.pdf" class = "button" id="done-button">Preview</a>
+    </div>
+
+    <!-- <script>
+        // JavaScript to open the PDF when the button is clicked
+        const openPdfButton = document.getElementById('done-button');
+    
+        openPdfButton.addEventListener('click', () => {
+          // Replace 'your-pdf-file.pdf' with the actual path to your PDF file
+          const pdfFilePath = "C:/Users/manas/OHacks_SQ/ColoringBook.pdf";
+    
+          // Use the window.open method to open the PDF in a new tab or window
+          window.open(pdfFilePath, '_blank');
+        });
+      </script> -->
+</body>
+</html>

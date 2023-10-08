@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Venture Devils</title>
+
+    <!-- Link to the CSS file -->
+    <link rel="stylesheet" href="styleFund.css">
+</head>
+<body>
+    <header>
+        <div class='Nav-Bar'>
+            <a href="index.html" class="logo">Suzie Q's</a>
+            <nav class="navbar">
+                <a href="index.html" class="active">Home</a>
+                <a href="fundraiser.html" class="active">Fundraising</a>
+                <a href="addlogo.html" class="active">Add Logo</a>
+                <a href="experiments.html" class="active">Donate</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="fund-page">
+        <div class="instructions">
+            <h2>Instructions: 
+                <br>
+                <br>
+                1. Upload a picture of your fundraiser
+                <br>
+                <br>
+                2. Fill out the form below
+                <br>
+                <br>
+                3. Submit your fundraiser
+                <br>
+                <br>
+                4. Add logo to your fundraiser
+            </h2>
+
+        </div>
+
+        <div class="upload-container">
+            <div class="img-container">
+                <img src="placeholder.png" alt="Placeholder Image" />
+            </div>
+
+            <h1>Upload an Image</h1>
+
+            <form id="image-upload-form" enctype="multipart/form-data">
+                <!-- Input for selecting an image file -->
+                <input type="file" id="image-file" name="image" accept="image/*" />
+                <!-- Buttons to trigger the upload and choose file -->
+                <div class="button-container">
+                    <button class="button" id = "upload-button" onclick="window.location.href = 'addlogo.html'">Upload</button>
+                </div>
+            </form>
+
+            <!-- Message to display when a file is uploaded -->
+            <p id="upload-message" style="display: none;">File uploaded successfully!</p>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript to handle file upload and display message
+        document.getElementById('upload-button').addEventListener('click', function () {
+            const inputElement = document.getElementById('image-file');
+            const messageElement = document.getElementById('upload-message');
+
+            if (inputElement.files.length > 0) {
+                messageElement.style.display = 'block';
+                window.location.href = 'addlogo.html';
+            } else {
+                messageElement.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
